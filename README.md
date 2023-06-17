@@ -1,14 +1,3 @@
-# TTDOM
-tiny, efficient, and no dependencies framework to mange real time ui with rizz 
+how TTDOM works:
 
-
-> this project was started because i wanted to learn more about DOM and want to build something!
-
-so here it goes!
-
-## inspiration:
-- https://github.com/thesephist/torus
-- https://github.com/amirgamil/poseidon
-
-# learnings:
-- how call stack and event loop works in the browser
+- the root component is rendered, then it is patched to the DOM. The virtual dom will then discover that it has sub components, and will mount them. This triggers the rendering of each sub component, which will then be mounted. If they have sub components, the process keeps going: rendering, then mounting/patching, then rendering, and so on.
